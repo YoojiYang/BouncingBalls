@@ -1,0 +1,40 @@
+新しいオブジェクトを作る
+  shapeクラスを作る
+    コンストラクターのみ
+      x,y,velx,vely
+  Ballクラスを修正
+    Shapeを継承したBallクラスとする
+      引数にsize,colorを追加
+      super(x, y, velx, vely)
+      sizeとcolorを初期化
+      新たにexistsプロパティを追加→true
+    collisionDetectメソッドを更新
+      existsプロパティがtrueの時だけ衝突判定を行う
+
+  EvilCircleの定義
+    コンストラクターの設定
+      引数はxとyのみ
+      velx,velyはハードコードで、20, 20
+      color = white
+      size = 10
+    メソッドの定義
+      draw()
+      checkBounds()
+      collisionDetect()
+
+プログラムにEcilCircleを出現させる
+  loop関数を変更する
+    新しいEvilCircleオブジェクトインスタンスを作成
+    繰り返しの必要はない
+    ボールのループの条件を変更
+      ボールが存在する時のみ、各メソッドを実行
+    EvilCircleのメソッドを呼び出す
+
+スコアカウンターを実装する
+  htmlとcssの追加
+  jsの処理
+      
+    段落への参照を格納する変数を作成
+    画面上に存在するボールの数をカウントする
+    ボールをシーンに追加するたびにカウントを増加させ、更新されたボールの数を表示
+    EvilCircleがボールを食べるたびにカウントを減らし、更新されたボールの数を表示
